@@ -11,7 +11,12 @@ export class ArticleService {
 
   constructor(private messageService : MessageService) { }
   
-  getArticleList (id:number): Observable<Article> {
+  getArticleList (): Observable<Article[]> {
+    this.messageService.add(`ArticleService : fetched the articleList`);
+    return of (ARTICLES);
+  }
+
+  getArticle (id:number): Observable<Article> {
     this.messageService.add(`ArticleService : fetched articles id=${id}`);
     return of (ARTICLES.find(article => article.id === id))
   }

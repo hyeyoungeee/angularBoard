@@ -2,7 +2,7 @@ import { Article } from './article';
 
 export const ARTICLES : Article [] = [
     {
-        num : 1,
+        id : 1,
         password : 1234,
         title : '제목1',
         writer : '혜영이',
@@ -11,7 +11,7 @@ export const ARTICLES : Article [] = [
         hit : 30
     },
     {
-        num : 2,
+        id : 2,
         password : 1234,
         title : '제목2',
         writer : '혜영이',
@@ -20,7 +20,7 @@ export const ARTICLES : Article [] = [
         hit : 30
     },
     {
-        num : 3,
+        id : 3,
         password : 1234,
         title : '제목1',
         writer : '혜영이',
@@ -29,7 +29,7 @@ export const ARTICLES : Article [] = [
         hit : 30
     },
     {
-        num : 4,
+        id : 4,
         password : 1234,
         title : '제목1',
         writer : '혜영이',
@@ -37,7 +37,7 @@ export const ARTICLES : Article [] = [
         writeDate : new Date(),
         hit : 30
     },{
-        num : 5,
+        id : 5,
         password : 1234,
         title : '제목1',
         writer : '혜영이',
