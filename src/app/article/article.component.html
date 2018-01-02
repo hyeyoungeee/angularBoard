@@ -1,0 +1,52 @@
+<table>
+  <colgroup>
+    <col width = "5%">
+    <col width = "30%">
+    <col width = "10%">
+    <col width = "20%">
+    <col width = "10%">
+    <col width = "25%">
+  </colgroup> 
+  <thead>
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+      <th>글쓴이</th>
+      <th>날짜</th>
+      <th>조회수</th>
+      <th>비고</th>  
+    </tr>  
+  </thead> 
+  <tbody class = "articles">
+    <tr *ngFor="let article of articles" 
+    (click) = "onSelect(article)" 
+    [class.selected]="article === selectedArticle">
+      <a routerLink="/detail/{{article.id}}">
+        <td>{{article.id}}</td>
+        <td>{{article.title}}</td>
+        <td>{{article.writer}}</td>
+        <td>{{article.writeDate | date}}</td>
+        <td>{{article.hit}}</td>
+        <td><button type = "button">수정</button><button type = "button">삭제</button></td>
+      </a>
+    </tr>
+  </tbody>
+</table>
+
+
+<table *ngIf="selectedArticle">
+  <h2>상세</h2>
+  <tr>
+    <th>제목</th>
+    <td>{{selectedArticle.title}}</td>
+  </tr>
+  <!-- <tr>
+    <th>비밀번호</th>
+    <td></td>
+  </tr> -->
+  <tr>
+    <th>내용</th>
+    <td><textarea>{{selectedArticle.content}}</textarea></td>
+  </tr>
+  <button (click)="edit">수정</button>
+</table>

@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>제목</th>
+    <td><input type = "text" [(ngModel)] = title></td>
+  </tr>
+  <tr>
+    <th>비밀번호</th>
+    <td><input type = "password" [(ngModel)] = password></td>
+  </tr>
+  <tr>
+    <th>내용</th>
+    <td><textarea [(ngModel)] = content></textarea></td>
+  </tr>
+  <button (click)="add">add</button>
+</table>
