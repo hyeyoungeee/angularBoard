@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { ListComponent } from './app.component';
+import { MainComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { RegistComponent } from './regist/regist.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +16,7 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
 
 @NgModule({
   declarations: [
-    ListComponent,
+    MainComponent,
     ArticleComponent,
     RegistComponent,
     MessagesComponent,
@@ -29,6 +29,6 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
     HttpClientModule
   ],
   providers: [ArticleService, MessageService ],
-  bootstrap: [ListComponent,MessagesComponent]
+  bootstrap: [MainComponent,MessagesComponent]
 })
 export class AppModule { }
