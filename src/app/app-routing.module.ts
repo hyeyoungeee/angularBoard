@@ -11,8 +11,7 @@ const routes : Routes = [
   {path : 'regist', component : RegistComponent },
   {path : 'list', component : ArticleComponent },
   {path : 'detail/:id', component : ArticleDetailComponent },
-  // {path : '', redirectTo : './list', pathMatch : 'full' },    
-  {path : '', component : MainComponent },
+  {path : '', redirectTo : '/list', pathMatch : 'full' }
 ];
 
 @NgModule({

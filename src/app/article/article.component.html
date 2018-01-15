@@ -18,15 +18,13 @@
     </tr>  
   </thead> 
   <tbody class = "articles">
-    <tr *ngFor="let article of articles">
-      <a routerLink="/detail/{{article.id}}">
+    <tr *ngFor="let article of articles" routerLink="/detail/{{article.id}}">
         <td>{{article.id}}</td>
         <td>{{article.title}}</td>
         <td>{{article.writer}}</td>
         <td>{{article.writeDate | date}}</td>
         <td>{{article.hit}}</td>
         <td><button type = "button">수정</button><button type = "button">삭제</button></td>
-      </a>
     </tr>
   </tbody>
 </table>
