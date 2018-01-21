@@ -2,7 +2,7 @@
   <h2>상세</h2>
   <tr>
     <th>제목</th>
-    <td>{{article.title}}</td>
+    <td><input type = "text" value = {{article.title}}></td>
   </tr>
   <!-- <tr>
     <th>비밀번호</th>
@@ -13,5 +13,5 @@
     <td><textarea>{{article.content}}</textarea></td>
   </tr>
   <button (click) = "goBack()">뒤로</button>
-  <button (click)="edit">수정</button>
+  <button (click)="save()">수정</button>
 </table>
