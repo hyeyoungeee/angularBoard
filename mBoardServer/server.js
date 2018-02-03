@@ -18,7 +18,8 @@ app.get('/getArticleList', function(req, res){
       if(err) throw err;
       console.log('The solutuion is : ' , rows);
 
-      res.send(rows);
+      //res.send(rows);
+	  res.json(rows);
     });
 });
 
